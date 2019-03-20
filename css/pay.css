@@ -1,0 +1,111 @@
+/*以下是头样式*/
+.ptop {
+    border: #2aabd2 solid;
+    border-radius: 10px;
+}
+
+.icon {
+    margin: 12px 10px 5px 0px;
+    height: 80px;
+    width: 60px;
+}
+
+.phone {
+    height: 40px;
+    width: 30px;
+    margin: 30px -5px 0px 0px;
+}
+
+.showcontent {
+    display: flex;
+    flex-direction: column;
+}
+
+/*以下是中间段*/
+.showitem {
+    height: 100px;
+    width: 100%;
+    background: #888888;
+    margin-bottom: 5px;
+    border: #2aabd2 solid;
+    border-radius: 5px;
+    /*box-shadow: 10px 10px 5px #888888;*/
+}
+
+.Money {
+    font-size: 48px;
+    color: red;
+}
+
+.payitem {
+    height: 40px;
+    width: 100%;
+    background: #7D97B8;
+    margin-bottom: 5px;
+    border: #2aabd2 solid;
+    border-radius: 5px;
+    /*box-shadow: 10px 10px 5px #888888;*/
+    font-size: 20px;
+}
+
+.leaveMsg {
+    padding-top: 15px;
+    border-top: #fffa7e solid;
+}
+
+textarea {
+    width: 98%;
+    border: orange solid;
+    border-radius: 6px;
+}
+
+/*以下是底部导航栏*/
+.nav {
+    border: #987cb9 solid;
+    border-radius: 10px;
+    margin-right: 10px;
+    background: #303A70;
+    padding: 10px 0 6px 0;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.ftips {
+
+    font-size: 18px;
+    color: orange;
+    margin-top: 5px;
+
+}
+
+/**************悬浮球效果*************/
+.ball {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    background: #238ff9;
+    vertical-align: top;
+    /*float:;*/
+    margin-top: -15px;
+    margin-left: -5px;
+
+}
+
+.balltxt {
+    display: block;
+    color: #FFFFFF;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+/******************************/
+
+.facbtn {
+    margin-right: 8px;
+    margin-top: 10px;
+}
