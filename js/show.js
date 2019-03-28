@@ -27,15 +27,17 @@ function subplus(temp1, num) {
     //购物车图标上下相同
     $('.balltxt')[0].innerText = parseInt($('#allQuantity')[0].innerText);
 }
-
-
 function doSubmitForm() {
     var form = document.getElementById('test-form');
     let str = $('.goodsitem');
     let num = $('.inputsm');
-    let detail=[];
+    let detail = [];
     for (let i = 0; i < str.length; i++) {
-        detail[i] = str[i].innerText + "," + num[i].innerText;
+        if (parseInt(num[i].innerText) != 0) {
+            detail[i] = str[i].innerText + "," + num[i].innerText;
+        } else {
+            detail[i] = "";
+        }
     }
     console.log(detail);
     $('#allpic')[0].value = $("#allMoney")[0].innerText;
