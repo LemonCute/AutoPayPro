@@ -32,11 +32,12 @@ function doSubmitForm() {
     let str = $('.goodsitem');
     let num = $('.inputsm');
     let detail = [];
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0,j=0; i < str.length; i++) {
         if (parseInt(num[i].innerText) != 0) {
-            detail[i] = str[i].innerText + "," + num[i].innerText;
+            detail[j] = str[i].innerText + "," + num[i].innerText;
+            j++;
         } else {
-            detail[i] = "";
+            // detail[i] = ",";
         }
     }
     console.log(detail);
