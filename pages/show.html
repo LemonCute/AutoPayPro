@@ -27,7 +27,6 @@
             <span>柠檬不萌却心酸</span><br>
             <span style="display: block"> 电话：18332178037</span>
         </div>
-
     </div>
     <div class="col-xs-3">
         <a href="tel:18332178037" class="btn">
@@ -40,22 +39,21 @@
 <!--5、虚线：-->
 <hr width="100%" color="#987cb9" size=2 style="">
 <div class="container showcontent">
-    <div class="showitem ">
+
+    <div class="showitem">
         <div class="col-xs-3 item">
             <img src="../img/show/goods.jpg" class="imgshow" alt="">
         </div>
         <div class="col-xs-9 item">
             <div style=" position: absolute;top: 15%;">
-                <span>美汁源 果粒橙 450ml</span><br/>
-                <span>￥<sapan style="font-size: 20px;color: crimson;" id="item-1-left" >5</sapan>元</span>
+                <span class="goodsitem">美汁源 果粒橙 1450ml</span><br/>
+                <span>￥<sapan style="font-size: 20px;color: crimson;" class="item-1-left" >5</sapan>元</span>
                 <div class="chooseitem ">
-
-                    <span>剩<sapan id="item-1-left">20</sapan>件</span>
-
+                    <span>剩<sapan class="item-left">20</sapan>件</span>
                     <div class="col-xs-8 col-xs-offset-3" style="padding-left: 26px">
-                        <img src="../img/show/sub.png" alt="" onclick="subplus('sub')">
-                        <label type="text" class="inputsm" id="item-1">10</label>
-                        <img src="../img/show/plus.png" alt="" onclick="subplus('plus')">
+                        <img src="../img/show/sub.png" alt="" onclick="subplus('sub',0)">
+                        <label type="text" class="inputsm" id="item-1">1</label>
+                        <img src="../img/show/plus.png" alt="" onclick="subplus('plus',0)">
                     </div>
                 </div>
             </div>
@@ -67,16 +65,16 @@
         </div>
         <div class="col-xs-9 item">
             <div style=" position: absolute;top: 15%;">
-                <span>美汁源 果粒橙 450ml</span><br/>
-                <span>￥<sapan style="font-size: 20px;color: crimson;" id="item-1-left" >5</sapan>元</span>
+                <span class="goodsitem">美汁源 果粒橙 2450ml</span><br/>
+                <span>￥<sapan style="font-size: 20px;color: crimson;" class="item-1-left" >5</sapan>元</span>
                 <div class="chooseitem ">
 
-                    <span>剩<sapan id="item-1-left">20</sapan>件</span>
+                    <span>剩<sapan class="item-left">20</sapan>件</span>
 
                     <div class="col-xs-8 col-xs-offset-3" style="padding-left: 26px">
-                        <img src="../img/show/sub.png" alt="" onclick="subplus('sub')">
-                        <label type="text" class="inputsm" id="item-1">10</label>
-                        <img src="../img/show/plus.png" alt="" onclick="subplus('plus')">
+                        <img src="../img/show/sub.png" alt="" onclick="subplus('sub',1)">
+                        <label type="text" class="inputsm" id="item-2">0</label>
+                        <img src="../img/show/plus.png" alt="" onclick="subplus('plus',1)">
                     </div>
                 </div>
             </div>
@@ -88,16 +86,16 @@
         </div>
         <div class="col-xs-9 item">
             <div style=" position: absolute;top: 15%;">
-                <span>美汁源 果粒橙 450ml</span><br/>
-                <span>￥<sapan style="font-size: 20px;color: crimson;" id="item-1-left" >5</sapan>元</span>
+                <span class="goodsitem">美汁源 果粒橙 3450ml</span><br/>
+                <span>￥<sapan style="font-size: 20px;color: crimson;" class="item-1-left" >5</sapan>元</span>
                 <div class="chooseitem ">
 
-                    <span>剩<sapan id="item-1-left">20</sapan>件</span>
+                    <span>剩<sapan class="item-left">20</sapan>件</span>
 
                     <div class="col-xs-8 col-xs-offset-3" style="padding-left: 26px">
-                        <img src="../img/show/sub.png" alt="" onclick="subplus('sub')">
-                        <label type="text" class="inputsm" id="item-1">10</label>
-                        <img src="../img/show/plus.png" alt="" onclick="subplus('plus')">
+                        <img src="../img/show/sub.png" alt="" onclick="subplus('sub',2)">
+                        <label type="text" class="inputsm" id="item-3">0</label>
+                        <img src="../img/show/plus.png" alt="" onclick="subplus('plus',2)">
                     </div>
                 </div>
             </div>
@@ -124,13 +122,19 @@
 <div class="nav container">
     <div class="col-xs-4 ftips">
         <img src="../img/show/shopping.png" alt="" style="margin-top: -10px; margin-left: 20px">
-        <span class="ball"><span class="balltxt">5</span></span><br>
-        <span class="ftips">已选<span>5</span>件</span>
+        <span class="ball"><span class="balltxt">0</span></span><br>
+        <span class="ftips">已选<span id="allQuantity">1</span>件</span>
     </div>
     <div style="float: right" class=" facbtn">
-        <button onclick="test('request')" class="btn btn-success">申请补货</button>
-        <button onclick="test('pay')" class="btn btn-info">选好了</button>
+        <!--<button onclick="test('request')" class="btn btn-success">申请补货</button>-->
+        <label  class="btn btn-success" >￥<span id="allMoney">5.50</span></label>
+        <button onclick="doSubmitForm()" class="btn btn-info">去支付</button>
+        <!--<button onclick="test('pay')" class="btn btn-info">选好了</button>-->
     </div>
 </div>
+<form id="test-form" method="get"  action='../alipayPHP/index.php' target="_blank">
+    <input type="text" name="allpic" id="allpic">
+    <input type="text" name="detail" id="detail">
+</form>
 </body>
 </html>

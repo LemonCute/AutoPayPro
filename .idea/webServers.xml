@@ -2,13 +2,16 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="27ee5df0-8d64-46ff-8c80-fd7c6b0e0d02" name="AlipayHost" url="">
+      <webServer id="27ee5df0-8d64-46ff-8c80-fd7c6b0e0d02" name="AlipayHost" url="http://llocalhost:8888/AutoPay/pages/show.html">
         <fileTransfer host="qxu1589930457.my3w.com" port="21" rootFolder="/htdocs">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
           </advancedOptions>
           <option name="port" value="21" />
         </fileTransfer>
+      </webServer>
+      <webServer id="0dba157c-e3a0-4532-85f5-6f2461cf2a61" name="local" url="http://localhost:8888/AutoPayPro">
+        <fileTransfer port="0" mountedRoot="S:\alipay\alipayPrj" accessType="MOUNT" />
       </webServer>
     </option>
   </component>
