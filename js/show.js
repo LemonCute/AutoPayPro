@@ -45,35 +45,10 @@ function doSubmitForm() {
     form.submit();
 }
 
-/*
-function showPay() {
-    let str = $('.goodsitem');
-    let num = $('.inputsm');
-    let detail;
-    for (let i = 0; i < str.length; i++) {
-        detail = str[i].innerText + "," + num[i].innerText;
-    }
-    var jqxhr = $.post('../alipayPHP/index.php', {
-        allpic: allmoney,
-        detail: detail,
-    }).done(function (data) {
-        console.log("success");
-    }).fail(function (xhr, status) {
-        console.log('fail');
-    }).always(function () {
-        window.open('../alipayPHP/index.php')
-    });
-
-}
 
 
-function test(str) {
-    // window.confirm("你点击了申请") ;
-    if (str == "pay") {
-        window.open("pay.html", target = "_parent");
-    }
-    else if (str == "request") {
-        window.open("request.html", target = "_parent");
-    }
-}
-*/
+
+
+
+
+
