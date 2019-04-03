@@ -30,11 +30,12 @@ BXukTPECgYBiB3t8EFm33djGzFmOdLJAGeqtVE9qza4xmDOyY8C4Q9O2yyfSzCiM
 cKop3jabBE4WioLiUPj9aYZdemxBNJ8DwIpOtpgY4CI5KxdqDtDkRXUJhLuqyVws
 2uOzvWy4AKLOUwwXOwTmRJivcHE58wKKKgE6MDK7/tFGEA1c+PjlkA==",
 
-    //异步通知地址  后台返回
-    'notify_url' => "http://lcke.top/alipay.trade.wap.pay-PHP-UTF-8/notify_url.php",
+    //异步<通知>地址  后台返回
+//    'notify_url' => "http://lcke.top/pay/notify_url.php",
+    'notify_url' => "http://localhost:8888/AutoPayPro/alipayPHP/notify_url.php",
 
-    //同步跳转     页面返回支付结果
-    'return_url' => "http://lcke.top",//"http://mitsein.com/alipay.trade.wap.pay-PHP-UTF-8/return_url.php",
+    //同步<跳转>     页面返回支付结果
+    'return_url' => "http://localhost:8888/AutoPayPro/alipayPHP/return_url.php",
 
     //编码格式
     'charset' => "UTF-8",
