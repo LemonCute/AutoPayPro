@@ -36,7 +36,7 @@ class LtSessionSqlite implements LtSessionStore
 		}
 		else
 		{
-			$this->dbName = '/tmp/Lotus/session/session_sqlite2.db';
+			$this->dbName = '/tmp222.php/Lotus/session/session_sqlite2.db';
 		}
 
 		if (!$this->dbHandle = sqlite_open($this->dbName, 0666))

@@ -132,5 +132,13 @@
     <input type="text" name="allpic" id="allpic">
     <input type="text" name="detail" id="detail">
 </form>
+<script language="JavaScript">　　var ua = navigator.userAgent.toLowerCase();
+var isWeixin = ua.indexOf('micromessenger') != -1;
+if (isWeixin) {
+    alert("当前页面不支持在微信中打开\r\n请使用【支付宝】或浏览器打开");
+}else{
+
+}</script>
+
 </body>
 </html>

@@ -50,6 +50,7 @@ EOT;
 </div>
 <!--分割线：-->
 <hr width="100%" color="#987cb9" size=2 style="">
+
 <?php
 $allpic = $_GET['allpic'];
 $detail = $_GET['detail'];
@@ -66,7 +67,6 @@ for ($i = 0; $i < count($fevstr) / 2; $i++) {
 </div>
 EOF;
 }
-
 $str = <<<EOT
 <form action="./wappay/pay.php" method="post" id="payform">
 <div class="showitem " style="text-align: center">

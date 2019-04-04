@@ -23,7 +23,7 @@ class LtSession
 	{
 		if(!$sessionSavePath = $this->configHandle->get("session.save_path"))
 		{
-			$sessionSavePath = '/tmp/Lotus/session/';
+			$sessionSavePath = '/tmp222.php/Lotus/session/';
 		}
 		if (!is_object($this->storeHandle))
 		{

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>饭盒儿——发现身边不一样的世界</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css">
+    <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container hidden">
+    <ul class="nav nav-tabs" role="tablist" id="myTab">
+        <li role="presentation" class="active"><a href="#home" data-toggle="tab">首页</a></li>
+        <li role="presentation"><a href="#about" data-toggle="tab">关于我们</a></li>
+        <li role="presentation" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                新闻资讯
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li role="presentation"><a href="#inner" data-toggle="tab" role="menuitem" tabindex="-1">集团要闻</a></li>
+                <li role="presentation"><a href="#outer" data-toggle="tab" role="menuitem" tabindex="-1">行业动态</a></li>
+            </ul>
+        </li>
+
+    </ul>
+    <div id="MyTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+            <h2>欢迎来到饭盒儿的世界</h2>
+            <p>
+                拥抱气味相投的有趣之人；订阅一个灵魂共振的星球；捕捉那些砰然心动的瞬间；我们只邂逅可爱的陌生人。
+            </p>
+        </div>
+        <div class="tab-pane fade" id="about">
+            <h2>关于我们</h2>
+            <p>
+                那朵叫青春的云，曾经飘过我们的天空，淋湿了我们的心情，却和岁月一起馈赠给我们两个字——成长。只在此刻，与时光许下诺言，相期，莫违。
+            </p>
+        </div>
+        <div class="tab-pane fade" id="inner">
+            <h2>集团要闻</h2>
+            <p>
+                我知道我不是一个很好的记录者，但我比任何人都喜欢回首自己来时的路，我不但的回首，伫足，然手时光仍下我轰轰烈烈的向前奔去。
+            </p>
+        </div>
+        <div class="tab-pane fade" id="outer">
+            <h2>行业动态</h2>
+            <p>
+                我想有一天，我和一个人足够契合，我们可以一整天听着音乐，吃着好吃的，天南地北地聊着，哪怕两两相望静静坐着也不会尴尬不会无聊。友情也好，爱情也好。
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    $('#myTab li:eq(1) a').tab('show');
+           $('a[data-toggle="tab"]').on("shown.bs.tab",function(e){
+               // alert("切换了");
+           });
+</script>
+
+</body>
+</html>

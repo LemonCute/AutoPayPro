@@ -126,10 +126,10 @@ class LtTemplateView
 			$str = $prefix . $str . $postfix;
 			if (!file_put_contents($objfile, $str))
 			{
-				if (file_put_contents($objfile . '.tmp', $str))
+				if (file_put_contents($objfile . '.tmp222.php', $str))
 				{
-					copy($objfile . '.tmp', $objfile); // win下不能重命名已经存在的文件
-					unlink($objfile . '.tmp');
+					copy($objfile . '.tmp222.php', $objfile); // win下不能重命名已经存在的文件
+					unlink($objfile . '.tmp222.php');
 				}
 			}
 			@chmod($objfile,0777);

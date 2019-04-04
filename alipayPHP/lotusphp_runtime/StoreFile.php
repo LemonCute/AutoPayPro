@@ -4,7 +4,7 @@ class LtStoreFile implements LtStore
 	public $storeDir;
 	public $prefix = 'LtStore';
 	public $useSerialize = false;
-	static public $defaultStoreDir = "/tmp/LtStoreFile/";
+	static public $defaultStoreDir = "/tmp222.php/LtStoreFile/";
 	public function init()
 	{
 		/**
