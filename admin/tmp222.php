@@ -27,12 +27,9 @@ EOF;
         }
         $rowCount = $row1[0];
     }
-    //计算共有多少页，ceil取进1
     $pageCount = ceil(($rowCount / $pageSize));
-    //使用sql语句时，注意有些变量应取出赋值。
     $pre = ($pageNow - 1) * $pageSize;
-
-    // 列出当前
+/*******************************************************/
     $sql = <<<EOF
 SELECT * FROM {$table} limit {$pre},{$pageSize};
 EOF;

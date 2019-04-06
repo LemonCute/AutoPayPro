@@ -1,6 +1,7 @@
+
 $(document).ready(function () {
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
+       var  myChart = echarts.init(document.getElementById('main'));
 // 指定图表的配置项和数据
         var option = {
             title: {
@@ -8,68 +9,56 @@ $(document).ready(function () {
             },
             tooltip: {},
             legend: {
-                data:['销量']
+                data: ['销量（瓶）']
             },
             xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子","1","2","2","3","5"],
-                axisLabel:{
-                    interval:0 ,
-                    formatter:function(val){
+                data: ["果粒橙", "营养快线", "可乐", "雪碧", "冰红茶", "绿茶", "冰糖雪梨", "脉动", "芬达", "醒目", "小茗同学"],
+                axisLabel: {
+                    interval: 0,
+                    formatter: function (val) {
                         return val.split("").join("\n");
                     }
                 }
             },
             yAxis: {},
             series: [{
-                name: '销量',
+                name: '销量（瓶）',
                 type: 'bar',
-                barWidth:'25',              //---柱形宽度
+                barWidth: '25',              //---柱形宽度
                 data: [5, 20, 36, 10, 10, 20, 20, 36, 10, 10, 20]
             }]
         };
 // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
     }
-)
-function CurentTime()
-{
+);
+
+
+function CurentTime() {
     var now = new Date();
     var year = now.getFullYear();       //年
     var month = now.getMonth() + 1;     //月
     var day = now.getDate();            //日
     var hh = now.getHours();            //时
     var mm = now.getMinutes();          //分
-    var ss=now.getSeconds();            //秒
+    var ss = now.getSeconds();            //秒
     var clock = year + "-";
-    if(month < 10)
+    if (month < 10)
         clock += "0";
     clock += month + "-";
-    if(day < 10)
+    if (day < 10)
         clock += "0";
     clock += day + " ";
-    if(hh < 10)
+    if (hh < 10)
         clock += "0";
     clock += hh + ":";
     if (mm < 10) clock += '0';
-    clock += mm+":";
+    clock += mm + ":";
     if (ss < 10) clock += '0';
     clock += ss;
     // console.log($('#realtime'));
-  $('#realtime')[0].innerText=clock;
+    $('#realtime')[0].innerText = clock;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function snow() {
     //  1、定义一片雪花模板
@@ -84,7 +73,7 @@ function snow() {
     //定义生成一片雪花的毫秒数
     var millisec = 30;
     //2、设置第一个定时器，周期性定时器，每隔一段时间（millisec）生成一片雪花；
-    setInterval(function() { //页面加载之后，定时器就开始工作
+    setInterval(function () { //页面加载之后，定时器就开始工作
         //随机生成雪花下落 开始 时left的值，相当于开始时X轴的位置
         var startLeft = Math.random() * documentWidth;
         //随机生成雪花下落 结束 时left的值，相当于结束时X轴的位置
@@ -111,7 +100,7 @@ function snow() {
         document.body.appendChild(cloneFlake);
         //设第二个定时器，一次性定时器，
         //当第一个定时器生成雪花，并在页面上渲染出来后，修改雪花的样式，让雪花动起来；
-        setTimeout(function() {
+        setTimeout(function () {
             //第二次修改样式
             cloneFlake.style.cssText += `
                 left: ${endLeft}px;
@@ -119,7 +108,7 @@ function snow() {
                 opacity:${endOpacity};
               `;
             //4、设置第三个定时器，当雪花落下后，删除雪花。
-            setTimeout(function() {
+            setTimeout(function () {
                 cloneFlake.remove();
             }, durationTime);
         }, 0);
@@ -127,23 +116,25 @@ function snow() {
     }, millisec);
 }
 
+function logout() {
+    //function clearCookie()
+    var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+    if (keys) {
+        for (var i = keys.length; i--;)
+            document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
+    }
+    location.href = "http://localhost:8888/AutoPayPro/admin/login/index.html";
+
+}
+;
+;
+;
+;
 
 
 
-// {
-// // 异步加载数据
-//     $.get('data.json').done(function (data) {
-//         // 填入数据
-//         myChart.setOption({
-//             xAxis: {
-//                 data: data.categories
-//             },
-//             series: [{
-//                 // 根据名字对应到相应的系列
-//                 name: '销量',
-//                 data: data.data
-//             }]
-//         });
-//     });
-//
-// }
+
+
+
+
+

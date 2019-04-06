@@ -5,7 +5,6 @@ body {
 .box {
     width: 100%;
     opacity: 0.9;
-    /*background: #BF5225;*/
     display: flex;
 }
 
@@ -14,23 +13,10 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-.per2tol {
-    width: 95%;
-    border: #7D97B8 solid;
-    margin-bottom: 20px;
-}
 .personal {
     height: 400px;
 }
-#bills b{
-    line-height: 100px;
-    font-size: 36px;
-}
-#bills div{
-    margin: 1px;
-    border:  1px solid #6e6e6e;
-}
+
 
 .other {
     margin-left: 5px;
@@ -38,8 +24,11 @@ body {
     height: 950px;
     background: #EDD64B;
 }
-
 .item {
     width: 100%;
     margin: 5px 0px 5px 0px;
+}
+.itema{
+    color: white;
+   text-decoration:none;
 }
