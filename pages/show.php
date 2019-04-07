@@ -97,7 +97,7 @@ EOF;
     <?php echo showmerchandise(); ?>
 
 
-    <div class="showitem "></div>
+
     <div class="showitem "></div>
     <div class="showitem "></div>
     <div class="showitem "></div>
