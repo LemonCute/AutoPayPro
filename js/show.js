@@ -2,6 +2,7 @@ var allmoney;
 
 //购买商品数量减一，剩余商品数目加一
 function subplus(temp1, num) {
+
     allmoney = $("#allMoney")[0].innerText;
     let multmp = $(".inputsm")[num].innerText;
     let multmpleft = $(".item-left")[num].innerText;

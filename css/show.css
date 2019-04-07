@@ -31,11 +31,19 @@
     box-shadow: 10px 10px 5px #888888;
 }
 
-.item {
-    /*width: 281px;*/
+.merpic {
+    width: 30%;
     height: 100%;
     background: olive;
     border-right: #3c3c3c solid;
+}
+.mercenter{
+    height: 100px;
+    width: 40%;
+}
+.meract{
+    float: right;
+    width: 30%;
 }
 
 .imgshow {

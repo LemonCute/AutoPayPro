@@ -55,14 +55,14 @@ EOF;
         $pageCount = ceil(($rowCount / $pageSize));
         $pre = ($pageNow - 1) * $pageSize;
         /***************************分页结束******************************/
-
-        if ($_COOKIE['username'] === 'root') {
+        $loginname=$_COOKIE['username'];
+        if ($loginname === 'root') {
             $sql = <<<EOF
     SELECT * FROM market  limit {$pre},{$pageSize};
 EOF;
         } else {
             $sql = <<<EOF
-    SELECT * FROM market where seller={$_COOKIE[$username]} limit {$pre},{$pageSize};
+    SELECT * FROM market where seller='{$_COOKIE['username']}' limit {$pre},{$pageSize};
 EOF;
         }
 
